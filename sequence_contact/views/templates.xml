@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+       <!-- improved idea categories list -->
+        <record id="id_sequence_contact" model="ir.ui.view">
+            <field name="name">res.partner.form.seq</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="type" position="before">
+                    <field name="sequence_contact" attrs="{'invisible': [('sequence_contact', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
